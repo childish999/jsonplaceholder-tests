@@ -5,4 +5,4 @@ def test_bing_search(page):
     page.locator("#sb_form_q").fill("接口测试")
     page.keyboard.press("Enter")
     page.wait_for_url("**q=**")
-    assert "接口测试" in page.title(), f"预期标题含'接口测试'，实际{page.title()}"
+    assert "接口测试"  in page.title(), f"预期标题含'接口测试'，实际{page.title()}"
