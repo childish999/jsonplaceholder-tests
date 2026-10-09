@@ -3,11 +3,11 @@ import requests
 
 BASE_URL = "https://jsonplaceholder.typicode.com"
 
-@pytest.fixture
+@pytest.fixture(scope="session")   # 改后：给 base_url 换正确的户口(scope="session")   # 改后：给 base_url 换正确的户口
 def base_url():
     return BASE_URL
 
-@pytest.fixture
+@pytest.fixture(scope="session")   # 改后：给 base_url 换正确的户口(scope="session")   # 改后：给 base_url 换正确的户口
 def created_post_id(base_url):          # fixture 也能依赖另一个 fixture（链式）
     response = requests.post(
         f"{base_url}/posts",

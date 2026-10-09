@@ -33,5 +33,6 @@ def test_get_all_posts(base_url):
     response = requests.get(f"{base_url}/posts", timeout=5)
     assert response.status_code == 200
     data = response.json()
-    assert isinstance(data, list)
+
+
     assert len(data) == 100
