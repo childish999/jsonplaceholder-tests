@@ -35,9 +35,11 @@ UI 端（必应搜索，2 条）：
 
 ```
 TestPythonProject2/
+├── hello_browser.py             # C-1 的第一个脚本，留作纪念
 ├── conftest.py                  # 全局 fixture：base_url、造帖与清理、bing_page
 ├── pytest.ini                   # 报告、重跑、失败证据的开关
 ├── requirements.txt             # 依赖清单
+├── .gitignore                   # 不收录报告、缓存、失败证据文件
 ├── report.html                  # 测试报告（运行后生成）
 └── tests/
     ├── test_read_posts.py       # 接口：查询（含参数化异常流）
